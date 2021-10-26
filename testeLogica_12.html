@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Teste 12</title>
+</head>
+<body>
+    <script>    
+    
+        // EXERCIDIO 12 - Dada duas lista de números A[1,2,3,4] e B[1,2,5,8], 
+        // faça um algoritmo que retorne a concatenação das listas. 
+        
+        let listaA = [1,2,3,4];
+        let listaB = [1,2,5,8];
+
+        let Concatenacao = listaA.concat(listaB);
+
+        const listasConcatenadas = [...new Set(Concatenacao)];
+
+        document.write(`${listasConcatenadas}`);
+
+    </script>
+</body>
+</html>

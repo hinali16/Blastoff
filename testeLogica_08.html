@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Teste 8</title>
+</head>
+<body>
+    <script>
+
+        // EXERCIDIO 8 - Faça um algoritmo que receba um número e retorne se o número é primo ou não.
+
+        function primo(num){
+
+        let numero = num;
+        let divisores = 0;
+
+        for(let count = 1 ; count<= numero ; count++)
+
+        if(numero % count == 0)
+            divisores++;
+        
+        if(divisores==2)
+            document.write(`${numero} é um número primo`);
+        else
+            document.write(`${numero} não é número primo`);
+        }
+        primo(11);
+
+    </script>
+</body>
+</html>

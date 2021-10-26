@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Teste 6</title>
+</head>
+<body>
+    <script>
+
+    // EXERCIDIO 6 - Uma partida de futebol iniciou na hora A e terminou na hora B. 
+    // Faça um algoritmo que  calcule o tempo que durou a partida. 
+
+    // Convertendo hora e minuto
+     function converterSegundos(hora,minuto) {
+        return (hora*3600)+(minuto*60);
+    }
+
+    // convertendo os valores dados para os horarios 
+    const hora1 = converterSegundos(15, 55); 
+    const hora2 = converterSegundos(16, 05);
+
+    
+    // formatando as horas para serem subtraidas
+    function formatarHora(s){
+        this.h = Math.floor(s/3600);
+        this.min = Math.floor((s - (this.h*3600))/60);
+        return this.h + "h "+ this.min + "min ";
+    };
+
+    // transformando o calculo em conjunto de caracteres 
+    let duracaoPartida = String(formatarHora(hora1-hora2));
+
+    // Tratamento das horas caso a hora de inicio da partida for menor que o horario de termino
+    // não mostrando o valor negativo " - " no resultado.
+    if (duracaoPartida.charAt(0) == "-"){
+        duracaoPartida = duracaoPartida.slice( 1 );
+    }
+
+    document.write(`O tempo de duração da partida é: ${duracaoPartida}`);
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Teste 14</title>
+</head>
+<body>
+    <script>
+
+        // EXERCIDIO 14 - Faça um algoritmo que recebe uma palavra e retorne se a palavra é .  (Palavra que se pode ler, 
+        // indiferentemente, da esquerda para direita ou vice-versa. Ex: osso,  Ana e etc).   
+
+        function palindrome(palavra){
+            const ignoreSpaces = palavra => palavra.split(' ').join('');
+            let inversa = palavra.split("").reverse().join(""); 
+
+            if(ignoreSpaces(palavra.toLowerCase()) === ignoreSpaces(inversa.toLowerCase())){
+                document.write(`A palavra ${palavra} é palíndroma`)
+            }else{
+                document.write(`A palavra ${palavra} não é palíndroma`)
+            }
+        }
+        palindrome("Luz Azul");
+
+    </script>
+</body>
+</html>

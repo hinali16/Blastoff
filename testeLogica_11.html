@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Teste 11</title>
+</head>
+<body>
+    <script>
+
+        // EXERCIDIO 11 - Dada duas lista de números A[1,2,3,4] e B[1,2,5,8], 
+        // faça um algoritmo que retorne a intersecção das listas
+
+        let listaA = [1,2,3,4];
+        let listaB = [1,2,5,8];
+        let interseccao = [];
+
+        for(let i=0; i<listaA.length; i++) {
+            if(listaB.indexOf(listaA[i]) > -1) {
+                interseccao.push(listaA[i]);
+            }
+        }
+
+        document.write(`A intersecção entre a lista A e a lista B é: ${interseccao}`);
+
+    </script>
+</body>
+</html>
